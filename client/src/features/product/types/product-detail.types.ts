@@ -13,6 +13,8 @@ export interface ProductColorway {
   hex: string;
   borderHex?: string;
   innerHex?: string;
+  image?: string;
+  imageUrl?: string;
 }
 
 export interface ProductSize {
