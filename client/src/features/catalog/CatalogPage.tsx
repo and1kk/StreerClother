@@ -11,11 +11,11 @@ import { INITIAL_PRODUCTS } from '../../data/products.data';
 import { Product, FilterState, SortOrder } from '../../types/catalog.types';
 
 const INITIAL_FILTER_STATE: FilterState = {
-  categories: ['Hoodies', 'Bottoms'],
-  sizes: ['L'],
-  colors: ['Black'],
-  fitType: 'Boxy / Oversized',
-  priceRange: [0, 350]
+  categories: [],
+  sizes: [],
+  colors: [],
+  fitType: '',
+  priceRange: [0, 500]
 };
 
 export interface CatalogPageProps {
