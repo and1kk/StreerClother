@@ -21,9 +21,14 @@ const INITIAL_FILTER_STATE: FilterState = {
 export interface CatalogPageProps {
   onSelectProduct?: (product: Product) => void;
   onOpenSearch?: () => void;
+  onAddToCart?: (product: Product, size: string) => void;
 }
 
-export const CatalogPage: React.FC<CatalogPageProps> = ({ onSelectProduct, onOpenSearch }) => {
+export const CatalogPage: React.FC<CatalogPageProps> = ({
+  onSelectProduct,
+  onOpenSearch,
+  onAddToCart
+}) => {
   const [products] = useState<Product[]>(INITIAL_PRODUCTS);
   const [filters, setFilters] = useState<FilterState>(INITIAL_FILTER_STATE);
   const [currentSort, setCurrentSort] = useState<SortOrder>('NEWEST DISPATCH');
@@ -117,6 +122,7 @@ export const CatalogPage: React.FC<CatalogPageProps> = ({ onSelectProduct, onOpe
   };
 
   const handleQuickAdd = (product: Product, size: string) => {
+    onAddToCart?.(product, size);
     setToastMessage(`DISPATCHED: ${product.title} [${size}] TO REGISTER`);
   };
 
