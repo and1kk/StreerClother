@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overscroll-behavior: none;
+    background-color: #131313;
+    color: #e2e2e2;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .brand-display-title {
+    font-family: 'Anton', sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.35px rgba(0, 0, 0, 0.85);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85), 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+

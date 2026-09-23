@@ -1,0 +1,17 @@
+Act as a Senior React Developer. I have a static HTML template styled with Tailwind CSS. Your task is to convert this into a production-ready, highly modular React application.
+
+Please strictly follow these architectural guidelines and output the refactored code:
+
+1. COMPONENT EXTRACTION: Do not return a single massive file. Break down the HTML into logical, small, and reusable React components (e.g., Layout, Header, ProductGallery, FilterSidebar, Button).
+2. DIRECTORY STRUCTURE: Organize the code using a modern React/Next.js folder structure. Group them logically (e.g., `src/components/layout/`, `src/components/ui/`, `src/features/`).
+3. DYNAMIC PROPS & STATE: 
+   - Identify static text/images in the HTML and replace them with dynamic React props. 
+   - Add placeholder state (`useState`) wherever interactivity is clearly needed (e.g., mobile menu toggle, active filter states, accordion open/close).
+4. TAILWIND & SYNTAX: 
+   - Convert all `class=` attributes to `className=`.
+   - Ensure all HTML tags are properly closed (e.g., `<input />`, `<img />`).
+   - If there are highly repetitive Tailwind classes (like buttons or inputs), extract them into a dedicated reusable UI component.
+5. ICONS: If there are raw SVGs, extract them into separate functional components or suggest replacing them with `lucide-react` icons.
+
+Here is the raw HTML + Tailwind code to convert:
+[ВСТАВЬ СВОЙ HTML КОД СЮДА]
